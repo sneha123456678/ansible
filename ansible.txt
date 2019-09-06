@@ -1,0 +1,27 @@
+17  2019-09-06 14:50:44 git clone https://github.com/sneha123456678/ansible.git
+   18  2019-09-06 14:50:53 ls
+   19  2019-09-06 14:51:05 cd ansible/
+   20  2019-09-06 14:51:21 ansible --version
+   21  2019-09-06 14:51:45 touch ansible.cfg
+   22  2019-09-06 14:51:52 ansible --version
+   23  2019-09-06 14:52:22 ansible localhost -m ping
+   24  2019-09-06 15:04:36 ansible localhost -m ping -i inventory -vvvv | grep "ESTABLISH"
+   25  2019-09-06 15:09:12 ansible localhost -m copy -a "content='Ansible is awesome' dest=./motd"
+   26  2019-09-06 15:11:22 ansible localhost -m command -a "echo content='Ansible is awesome' > ./motd"
+   27  2019-09-06 15:11:56 ansible-doc -l
+   30  2019-09-06 15:13:15 ansible-doc lineinfile
+   31  2019-09-06 15:17:25 ansible localhost -m lineinfile -a "line='ansible is super awesome' path=./motd"
+   32  2019-09-06 15:18:58 ansible-doc lineinfile
+   33  2019-09-06 15:24:05 ansible localhost -m lineinfile -a "line='ansible is superawesome' path=./motd"
+   34  2019-09-06 15:25:24 ansible-doc lineinfile
+   35  2019-09-06 15:29:01 vim ./motd 
+   37  2019-09-06 15:29:52 vim ./motd 
+   38  2019-09-06 15:29:59 vim ./motd wq
+   39  2019-09-06 15:30:25 ansible localhost -m lineinfile -a "regexp='^Ansible is awesome' line='Ansible is Nikhil' path=./motd"
+   40  2019-09-06 15:30:32 vim ./motd wq
+   41  2019-09-06 15:31:20 ansible localhost -m lineinfile -a "regexp='^Ansible is Nikhil' line='Ansible is sneha' path=./motd"
+   42  2019-09-06 15:31:25 vim ./motd wq
+   43  2019-09-06 15:32:31 ansible localhost -m lineinfile -a "regexp='Ansible is Nikhil' line='Ansible is Super' path=./motd"
+   44  2019-09-06 15:32:36 vim ./motd wq
+   45  2019-09-06 15:37:07 ansible-doc lineinfile
+
