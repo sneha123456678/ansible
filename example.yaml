@@ -1,0 +1,6 @@
+---
+- name: "Example Playbook"
+  hosts: all
+  tasks:
+  - name: Example Pine Task
+    ping:
