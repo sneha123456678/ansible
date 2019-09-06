@@ -1,0 +1,13 @@
+---
+- name: Install and Start httpd
+  hosts: localhost
+  tasks:
+  - name: install the latest version of Apache
+    yum: 
+      name: httpd
+      state: present
+
+  - name: restart sdfdgfd
+    service:
+      name: httpd
+      state: restarted
