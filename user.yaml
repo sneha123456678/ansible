@@ -1,0 +1,11 @@
+---
+- name: User Permissions
+  hosts: localhost
+
+  tasks:
+  - name: Add new user
+    command: useradd Sneha4
+  - name: Add one directory
+    command: mkdir /test1
+  - name: Set acl 
+    command: setfacl -m u:Sneha4:rwx /test1
